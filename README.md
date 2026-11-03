@@ -29,9 +29,22 @@
 
 <img src="./assets/divider.svg" width="100%" />
 
+<h2 align="center">🕷 active directives</h2>
+
+<p align="left">
+
+- **Vamp Layout:** Modern architectural layout engine focused on high-performance modular UI components and layout rendering.
+- **EMG Bio-Sensor:** Conceptual surface electromyography wearable bracelet for motor rehabilitation and gesture recognition.
+- **Source 2 Modding & CV:** Asset extraction via **Source2Viewer**, 3D character pipeline in **Blender**, and hand/facial gesture computer vision tracking R&D in **Python**.
+- **Cybersecurity Research:** Applied vulnerability assessment and threat analysis methodologies within academic seedbed workflows.
+
+</p>
+
+<img src="./assets/divider.svg" width="100%" />
+
 <h2 align="center">⚙ arsenal</h2>
 
-<h4 align="center">Core</h4>
+<h4 align="center">Core Stack</h4>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=angular,ts,go,java,html,css&theme=dark" />
 </p>
@@ -46,7 +59,7 @@
   <img src="https://skillicons.dev/icons?i=docker,azure,git,github,nodejs,pnpm,npm&theme=dark" />
 </p>
 
-<h4 align="center">Modding & 3D</h4>
+<h4 align="center">Modding, 3D & Vision</h4>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=blender,python&theme=dark" />
 </p>
@@ -57,13 +70,14 @@
   <img src="https://img.shields.io/badge/Go_Services-0a0a0f?style=for-the-badge&logo=go&logoColor=a78bfa" />
   <img src="https://img.shields.io/badge/DBeaver-0a0a0f?style=for-the-badge&logo=dbeaver&logoColor=a78bfa" />
   <img src="https://img.shields.io/badge/Azure_DevOps-0a0a0f?style=for-the-badge&logo=azuredevops&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Source_2-0a0a0f?style=for-the-badge&logo=valve&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Source_2_Engine-0a0a0f?style=for-the-badge&logo=valve&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Source2Viewer-0a0a0f?style=for-the-badge&logo=github&logoColor=a78bfa" />
 </p>
 
 <h4 align="center">Environment</h4>
 <p align="center">
   <img src="https://img.shields.io/badge/VS_Code-0a0a0f?style=flat-square&logo=visualstudiocode&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Android_Studio-0a0a0f?style=flat-square&logo=androidstudio&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Shades_of_Purple-0a0a0f?style=flat-square" />
   <img src="https://img.shields.io/badge/Cascadia_Code_NF-0a0a0f?style=flat-square" />
   <img src="https://img.shields.io/badge/Komorebi-0a0a0f?style=flat-square" />
   <img src="https://img.shields.io/badge/SwayFX-0a0a0f?style=flat-square" />
@@ -77,22 +91,19 @@
 <h2 align="center">☾ live metrics</h2>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=tomikav&hide_border=true&background=0A0A0F&ring=8B5CF6&fire=E11D48&currStreakLabel=A78BFA&sideLabels=A78BFA&currStreakNum=EDE9FE&sideNums=EDE9FE&dates=6D5A8F" alt="streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=tomikav&theme=dark&hide_border=true&background=0a0a0f&ring=8b5cf6&fire=8b949e&currStreakLabel=8b949e" alt="streak" />
 </p>
 
-<table align="center">
-<tr>
-<td width="55%" align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=tomikav&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0a0a0f&title_color=a78bfa&icon_color=8b5cf6&text_color=c4b5fd&ring_color=8b5cf6&rank_icon=github" width="100%" alt="stats" />
-</td>
-<td width="45%" align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tomikav&layout=compact&langs_count=8&hide_border=true&bg_color=0a0a0f&title_color=a78bfa&text_color=c4b5fd" width="100%" alt="top langs" />
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=tomikav&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0a0a0f&title_color=a78bfa&icon_color=8b5cf6&text_color=c4b5fd&ring_color=8b5cf6" alt="stats" />
+</p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=tomikav&bg_color=0a0a0f&color=c4b5fd&line=8b5cf6&point=ede9fe&area=true&area_color=8b5cf6&hide_border=true&title_color=a78bfa&custom_title=%E2%80%A0%20contribution%20graph%20%E2%80%A0" width="100%" alt="activity graph" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tomikav&layout=compact&langs_count=8&hide_border=true&bg_color=0a0a0f&title_color=a78bfa&text_color=c4b5fd" alt="top langs" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=tomikav&bg_color=0a0a0f&color=c4b5fd&line=8b5cf6&point=ede9fe&area=true&area_color=8b5cf6&hide_border=true&title_color=a78bfa" alt="activity graph" />
 </p>
 
 <img src="./assets/divider.svg" width="100%" />
@@ -100,14 +111,14 @@
 <h2 align="center">⛓ machines</h2>
 
 <details>
-<summary><b>🖥️ Primary Rig</b>: Desktop</summary>
+<summary><b>🖥️ Primary Rig</b>: Desktop Workstation</summary>
 <br/>
 
 | | | | |
 |:--|:--|:--|:--|
 | **CPU** | AMD Ryzen 5 5600X | **GPU** | NVIDIA RTX 4060 Ti |
-| **MOBO** | Gigabyte B550M Aorus Elite | **RAM** | 16 GB |
-| **Storage** | 1 TB SATA SSD | **OS** | Windows 11 · Garuda Linux |
+| **MOBO** | Gigabyte B550M Aorus Elite | **RAM** | 16 GB DDR4 |
+| **Storage** | 1 TB SATA SSD + 512 GB SSD + 1 TB HDD + 1 TB HDD (3.5 TB Total) | **OS** | Windows 11 Pro |
 
 </details>
 
@@ -118,21 +129,40 @@
 | | | | |
 |:--|:--|:--|:--|
 | **CPU** | Intel Core i5-13420H | **GPU** | NVIDIA RTX 4050 |
-| **RAM** | 32 GB DDR5 | **Storage** | 512 GB SSD |
+| **RAM** | 32 GB DDR5 | **Storage** | 512 GB NVMe SSD + 1 TB External HDD |
+| **Use-Case** | Mobile Dev, Modding & Linux Workflows | **OS** | Windows 11 · Garuda Linux |
 
 </details>
 
 <details>
-<summary><b>🎮 Peripherals & Displays</b></summary>
+<summary><b>📦 Virtual Machines & Lab Environments</b></summary>
+<br/>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Arch_Linux-0a0a0f?style=flat-square&logo=archlinux&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Kali_Linux-0a0a0f?style=flat-square&logo=kalilinux&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Ubuntu-0a0a0f?style=flat-square&logo=ubuntu&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Debian-0a0a0f?style=flat-square&logo=debian&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Fedora-0a0a0f?style=flat-square&logo=fedora&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/OpenSUSE-0a0a0f?style=flat-square&logo=opensuse&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Pop!_OS-0a0a0f?style=flat-square&logo=popos&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Bazzite-0a0a0f?style=flat-square&logo=linux&logoColor=a78bfa" />
+</p>
+
+</details>
+
+<details>
+<summary><b>🎮 Peripherals & Workspace</b></summary>
 <br/>
 
 | | |
 |:--|:--|
-| **Mouse** | Razer Basilisk V3 Pro Wireless |
-| **Keyboard** | Epomaker TH80 SE |
+| **Primary Keyboard** | Epomaker TH80 SE *(Lubed Bluebird Switches)* |
+| **Secondary Keyboard** | EPOMAKER SKYLOONG GK75 Lite Gasket-Like *(Black Switches)* |
+| **Mice Arsenal** | Razer Basilisk V3 Pro Wireless · Logitech G502 KDA · AJAZZ AJ159 Pro *(with Charging Dock)* |
 | **Controller** | PS5 DualSense |
-| **Main display** | LG 1080p 144 Hz G-Sync |
-| **Secondary display** | LG (vertical) |
+| **Displays** | LG 1080p 144 Hz G-Sync (Main) + LG Vertical Display |
+| **Mounts & Accessories** | Dual Monitor Arms · Laptop Stand |
 
 </details>
 
