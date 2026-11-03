@@ -118,9 +118,41 @@ export function renderLangs(langs) {
   return frame(W, 240, "◈ MOST USED LANGUAGES", bar + list, css);
 }
 
+
+export function renderCalendar(weeks, total) {
+  const LV = { NONE: "#161122", FIRST_QUARTILE: "#2e1065", SECOND_QUARTILE: "#5b21b6", THIRD_QUARTILE: "#7c3aed", FOURTH_QUARTILE: "#c4b5fd" };
+  const cell = 12, gap = 3, x0 = 46, y0 = 58;
+  const W = x0 + weeks.length * (cell + gap) + 24, H = y0 + 7 * (cell + gap) + 46;
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  let lastMonth = -1;
+  const labels = [], cells = [];
+  weeks.forEach((w, i) => {
+    const x = x0 + i * (cell + gap);
+    const first = w.contributionDays[0];
+    const m = new Date(first.date + "T00:00:00").getMonth();
+    if (m !== lastMonth && i < weeks.length - 2) { labels.push(`<text x="${x}" y="${y0 - 10}" class="l" style="font-size:11px">${months[m]}</text>`); lastMonth = m; }
+    for (const d of w.contributionDays) {
+      const y = y0 + d.weekday * (cell + gap);
+      cells.push(`<rect x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2.5" fill="${LV[d.contributionLevel] || LV.NONE}"><title>${d.contributionCount} on ${d.date}</title></rect>`);
+    }
+  });
+  const days = [[1, "Mon"], [3, "Wed"], [5, "Fri"]].map(([wd, n]) => `<text x="12" y="${y0 + wd * (cell + gap) + 10}" class="l" style="font-size:11px">${n}</text>`).join("");
+  const ly = H - 22, lx = W - 24 - 5 * (cell + gap) - 70;
+  const legend = `<text x="${lx}" y="${ly + 10}" class="l" style="font-size:11px">Less</text>` +
+    Object.values(LV).map((c, i) => `<rect x="${lx + 34 + i * (cell + gap)}" y="${ly}" width="${cell}" height="${cell}" rx="2.5" fill="${c}"/>`).join("") +
+    `<text x="${lx + 34 + 5 * (cell + gap) + 4}" y="${ly + 10}" class="l" style="font-size:11px">More</text>`;
+  const sum = `<text x="${x0}" y="${ly + 10}" class="l" style="font-size:11px">${total} contributions in the last year</text>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+<style>text { font-family: ${FONT}; } .l { fill: ${C.label}; } .t { fill: ${C.title}; font-size: 13px; font-weight: 700; letter-spacing: 2px; }</style>
+<rect x=".5" y=".5" width="${W - 1}" height="${H - 1}" rx="10" fill="${C.bg}" stroke="${C.border}"/>
+<text x="${x0}" y="26" class="t">◈ CONTRIBUTION GRAPH</text>
+${labels.join("")}${days}${cells.join("")}${legend}${sum}
+</svg>`;
+}
+
 async function fetchData(login, token) {
   const query = `query($login:String!){ user(login:$login){
-    contributionsCollection { totalCommitContributions restrictedContributionsCount totalPullRequestContributions totalIssueContributions contributionCalendar { totalContributions } }
+    contributionsCollection { totalCommitContributions restrictedContributionsCount totalPullRequestContributions totalIssueContributions contributionCalendar { totalContributions weeks { contributionDays { date contributionCount contributionLevel weekday } } } }
     repositoriesContributedTo(first:1, contributionTypes:[COMMIT,PULL_REQUEST,ISSUE,REPOSITORY]) { totalCount }
     repositories(first:100, ownerAffiliations:OWNER, isFork:false, privacy:PUBLIC) {
       totalCount
@@ -156,6 +188,7 @@ async function fetchData(login, token) {
       contributedTo: u.repositoriesContributedTo.totalCount,
       total: cc.contributionCalendar.totalContributions,
     },
+    weeks: cc.contributionCalendar.weeks,
     langs: [...langMap.values()].sort((a, b) => b.size - a.size),
   };
 }
@@ -164,9 +197,10 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const login = process.env.GH_USER;
   const token = process.env.GITHUB_TOKEN;
   if (!login || !token) throw new Error("GH_USER and GITHUB_TOKEN are required");
-  const { stats, langs } = await fetchData(login, token);
+  const { stats, langs, weeks } = await fetchData(login, token);
   mkdirSync("dist", { recursive: true });
   writeFileSync("dist/stats.svg", renderStats(stats));
   writeFileSync("dist/langs.svg", renderLangs(langs));
+  writeFileSync("dist/graph.svg", renderCalendar(weeks, stats.total));
   console.log("ok", stats, langs.slice(0, 8).map((l) => l.name));
 }

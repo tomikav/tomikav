@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header-v4.svg" width="100%" alt="TOMIKA" />
+  <img src="./assets/header-v5.svg" width="100%" alt="TOMIKA" />
 </p>
 
 <p align="center">
@@ -102,6 +102,16 @@
 <p align="center">
   <img src="https://raw.githubusercontent.com/tomikav/tomikav/output/snake.svg" width="100%" alt="contribution snake" />
 </p>
+
+<div align="right">
+<details>
+<summary><kbd>⏸ pause</kbd></summary>
+<br/>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/tomikav/tomikav/output/graph.svg" width="100%" alt="contribution graph" />
+</p>
+</details>
+</div>
 
 <img src="./assets/divider.svg" width="100%" />
 
