@@ -15,7 +15,7 @@
 
 <img src="./assets/divider.svg" width="100%" />
 
-<h2 align="center">⛧ whoami ⛧</h2>
+<h2 align="center">⛧ sys.identity ⛧</h2>
 
 <p align="center">
   <img src="./assets/whoami_1.svg" width="100%" alt="whoami" />
