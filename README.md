@@ -77,7 +77,7 @@
 <h4 align="center">Environment</h4>
 <p align="center">
   <img src="https://img.shields.io/badge/VS_Code-0a0a0f?style=flat-square&logo=visualstudiocode&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Shades_of_Purple-0a0a0f?style=flat-square" />
+  <img src="https://img.shields.io/badge/Android_Studio-0a0a0f?style=flat-square&logo=androidstudio&logoColor=a78bfa" />
   <img src="https://img.shields.io/badge/Cascadia_Code_NF-0a0a0f?style=flat-square" />
   <img src="https://img.shields.io/badge/Komorebi-0a0a0f?style=flat-square" />
   <img src="https://img.shields.io/badge/SwayFX-0a0a0f?style=flat-square" />
@@ -95,15 +95,12 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=tomikav&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0a0a0f&title_color=a78bfa&icon_color=8b5cf6&text_color=c4b5fd&ring_color=8b5cf6" alt="stats" />
+  <img src="https://raw.githubusercontent.com/tomikav/tomikav/output/stats.svg" width="49%" alt="stats" />
+  <img src="https://raw.githubusercontent.com/tomikav/tomikav/output/langs.svg" width="49%" alt="top langs" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tomikav&layout=compact&langs_count=8&hide_border=true&bg_color=0a0a0f&title_color=a78bfa&text_color=c4b5fd" alt="top langs" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=tomikav&bg_color=0a0a0f&color=c4b5fd&line=8b5cf6&point=ede9fe&area=true&area_color=8b5cf6&hide_border=true&title_color=a78bfa" alt="activity graph" />
+  <img src="https://raw.githubusercontent.com/tomikav/tomikav/output/snake.svg" width="100%" alt="contribution snake" />
 </p>
 
 <img src="./assets/divider.svg" width="100%" />
