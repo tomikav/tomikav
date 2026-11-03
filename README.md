@@ -17,35 +17,15 @@
 
 <h2 align="center">⛧ whoami ⛧</h2>
 
-<table>
-<tr>
-<td width="60%" valign="middle">
-
-```bash
-❯ whoami
-tomika        # systems engineering @ UPB · bucaramanga, co
-
-❯ cat ./focus
-web apps · terminal tooling · game mods · 3D assets
-
-❯ ls ~/lab
-angular-ssr/  go-services/  java-oop/  source2-mods/  blender/
-
-❯ uname -o
-Windows 11  ⇄  Garuda Linux
-```
+<p align="center">
+  <img src="./assets/whoami.svg" width="100%" alt="whoami" />
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Windows_11-0a0a0f?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMTEuNHYxMS40SDB6TTEyLjYgMEgyNHYxMS40SDEyLjZ6TTAgMTIuNmgxMS40VjI0SDB6TTEyLjYgMTIuNkgyNFYyNEgxMi42eiIvPjwvc3ZnPg%3D%3D" />
   <img src="https://img.shields.io/badge/Garuda_Linux-0a0a0f?style=for-the-badge&logo=garudalinux&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Cybersecurity_Seedbed-0a0a0f?style=for-the-badge&logo=hackthebox&logoColor=a78bfa" />
 </p>
-
-</td>
-<td width="40%" align="center" valign="middle">
-  <img src="[[TALL_CHARACTER_IMAGE_URL]]" alt="" width="100%" />
-</td>
-</tr>
-</table>
 
 <img src="./assets/divider.svg" width="100%" />
 
@@ -83,7 +63,7 @@ Windows 11  ⇄  Garuda Linux
 <h4 align="center">Environment</h4>
 <p align="center">
   <img src="https://img.shields.io/badge/VS_Code-0a0a0f?style=flat-square&logo=visualstudiocode&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Shades_of_Purple-2D2B55?style=flat-square" />
+  <img src="https://img.shields.io/badge/Android_Studio-0a0a0f?style=flat-square&logo=androidstudio&logoColor=a78bfa" />
   <img src="https://img.shields.io/badge/Cascadia_Code_NF-0a0a0f?style=flat-square" />
   <img src="https://img.shields.io/badge/Komorebi-0a0a0f?style=flat-square" />
   <img src="https://img.shields.io/badge/SwayFX-0a0a0f?style=flat-square" />
