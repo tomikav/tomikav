@@ -18,7 +18,7 @@
 <h2 align="center">⛧ whoami ⛧</h2>
 
 <p align="center">
-  <img src="./assets/whoami.svg" width="100%" alt="whoami" />
+  <img src="./assets/whoami_1.svg" width="100%" alt="whoami" />
 </p>
 
 <p align="center">
