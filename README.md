@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header.svg" width="100%" alt="TOMIKA" />
+  <img src="./assets/header-v2.svg" width="100%" alt="TOMIKA" />
 </p>
 
 <p align="center">
