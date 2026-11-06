@@ -42,48 +42,10 @@
 
 <img src="./assets/divider.svg" width="100%" />
 
-<h2 align="center">⚙ arsenal</h2>
-
-<h4 align="center">Core Stack</h4>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=angular,ts,go,java,html,css&theme=dark" />
-</p>
-
-<h4 align="center">Backend & Databases</h4>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=go,java,postgres&theme=dark" />
-</p>
-
-<h4 align="center">Architecture & Tooling</h4>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=docker,azure,git,github,nodejs,pnpm,npm&theme=dark" />
-</p>
-
-<h4 align="center">Modding, 3D & Vision</h4>
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=blender,python&theme=dark" />
-</p>
+<h2 align="center">arsenal</h2>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Angular_SSR-0a0a0f?style=for-the-badge&logo=angular&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Nx_Monorepos-0a0a0f?style=for-the-badge&logo=nx&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Go_Services-0a0a0f?style=for-the-badge&logo=go&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/DBeaver-0a0a0f?style=for-the-badge&logo=dbeaver&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Azure_DevOps-0a0a0f?style=for-the-badge&logo=azuredevops&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Source_2_Engine-0a0a0f?style=for-the-badge&logo=valve&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Source2Viewer-0a0a0f?style=for-the-badge&logo=github&logoColor=a78bfa" />
-</p>
-
-<h4 align="center">Environment</h4>
-<p align="center">
-  <img src="https://img.shields.io/badge/VS_Code-0a0a0f?style=flat-square&logo=visualstudiocode&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Android_Studio-0a0a0f?style=flat-square&logo=androidstudio&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Cascadia_Code_NF-0a0a0f?style=flat-square" />
-  <img src="https://img.shields.io/badge/Komorebi-0a0a0f?style=flat-square" />
-  <img src="https://img.shields.io/badge/SwayFX-0a0a0f?style=flat-square" />
-  <img src="https://img.shields.io/badge/fish-0a0a0f?style=flat-square&logo=fishshell&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Starship-0a0a0f?style=flat-square&logo=starship&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Oh_My_Posh-0a0a0f?style=flat-square" />
+  <img src="./assets/arsenal.svg" width="100%" alt="arsenal" />
 </p>
 
 <img src="./assets/divider.svg" width="100%" />
