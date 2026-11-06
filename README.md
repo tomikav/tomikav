@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header-v5.svg" width="100%" alt="TOMIKA" />
+  <img src="./assets/header-v6.svg" width="100%" alt="TOMIKA" />
 </p>
 
 <p align="center">
@@ -100,12 +100,12 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/tomikav/tomikav/output/snake.svg" width="100%" alt="contribution snake" />
+  <img src="https://raw.githubusercontent.com/tomikav/tomikav/output/pulse.svg" width="100%" alt="signal monitor" />
 </p>
 
 <div align="right">
 <details>
-<summary><kbd>⏸ pause</kbd></summary>
+<summary><kbd>▦ raw grid</kbd></summary>
 <br/>
 <p align="center">
   <img src="https://raw.githubusercontent.com/tomikav/tomikav/output/graph.svg" width="100%" alt="contribution graph" />
@@ -117,61 +117,9 @@
 
 <h2 align="center">⛓ machines</h2>
 
-<details>
-<summary><b>🖥️ Primary Rig</b>: Desktop Workstation</summary>
-<br/>
-
-| | | | |
-|:--|:--|:--|:--|
-| **CPU** | AMD Ryzen 5 5600X | **GPU** | NVIDIA RTX 4060 Ti |
-| **MOBO** | Gigabyte B550M Aorus Elite | **RAM** | 16 GB DDR4 |
-| **Storage** | 1 TB SATA SSD + 512 GB SSD + 1 TB HDD + 1 TB HDD (3.5 TB Total) | **OS** | Windows 11 Pro |
-
-</details>
-
-<details>
-<summary><b>💻 Secondary Rig</b>: Acer Nitro V15</summary>
-<br/>
-
-| | | | |
-|:--|:--|:--|:--|
-| **CPU** | Intel Core i5-13420H | **GPU** | NVIDIA RTX 4050 |
-| **RAM** | 32 GB DDR5 | **Storage** | 512 GB NVMe SSD + 1 TB External HDD |
-| **Use-Case** | Mobile Dev, Modding & Linux Workflows | **OS** | Windows 11 · Garuda Linux |
-
-</details>
-
-<details>
-<summary><b>📦 Virtual Machines & Lab Environments</b></summary>
-<br/>
-
 <p align="center">
-  <img src="https://img.shields.io/badge/Arch_Linux-0a0a0f?style=flat-square&logo=archlinux&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Kali_Linux-0a0a0f?style=flat-square&logo=kalilinux&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Ubuntu-0a0a0f?style=flat-square&logo=ubuntu&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Debian-0a0a0f?style=flat-square&logo=debian&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Fedora-0a0a0f?style=flat-square&logo=fedora&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/OpenSUSE-0a0a0f?style=flat-square&logo=opensuse&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Pop!_OS-0a0a0f?style=flat-square&logo=popos&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Bazzite-0a0a0f?style=flat-square&logo=linux&logoColor=a78bfa" />
+  <img src="./assets/machines.svg" width="100%" alt="machines" />
 </p>
-
-</details>
-
-<details>
-<summary><b>🎮 Peripherals & Workspace</b></summary>
-<br/>
-
-| | |
-|:--|:--|
-| **Primary Keyboard** | Epomaker TH80 SE *(Lubed Bluebird Switches)* |
-| **Secondary Keyboard** | EPOMAKER SKYLOONG GK75 Lite Gasket-Like *(Black Switches)* |
-| **Mice Arsenal** | Razer Basilisk V3 Pro Wireless · Logitech G502 KDA · AJAZZ AJ159 Pro *(with Charging Dock)* |
-| **Controller** | PS5 DualSense |
-| **Displays** | LG 1080p 144 Hz G-Sync (Main) + LG Vertical Display |
-| **Mounts & Accessories** | Dual Monitor Arms · Laptop Stand |
-
-</details>
 
 <img src="./assets/divider.svg" width="100%" />
 

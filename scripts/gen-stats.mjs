@@ -150,6 +150,99 @@ ${labels.join("")}${days}${cells.join("")}${legend}${sum}
 </svg>`;
 }
 
+export function renderPulse(weeks, total) {
+  const days = weeks.flatMap((w) => w.contributionDays);
+  const N = days.length;
+  const BG = "#1b2129", BORDER = "#353d48", DIM = "#6e7681", TXT = "#e6edf3";
+  const W = 1000, H = 300;
+  const cx = 170, cy = 150, R = 115, SWEEP = 6;
+  // radar blips: angle = position in the year, radius = intensity
+  const maxC = Math.max(1, ...days.map((d) => d.contributionCount));
+  const blips = days
+    .map((d, i) => ({ d, i }))
+    .filter(({ d }) => d.contributionCount > 0)
+    .map(({ d, i }) => {
+      const a = (i / N) * 2 * Math.PI - Math.PI / 2;
+      const r = 28 + (d.contributionCount / maxC) * (R - 38);
+      const x = cx + Math.cos(a) * r, y = cy + Math.sin(a) * r;
+      const delay = ((i / N) * SWEEP).toFixed(2);
+      const col = d.contributionCount / maxC > 0.66 ? "#fef08a" : d.contributionCount / maxC > 0.33 ? "#22d3ee" : "#a78bfa";
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.2" fill="${col}" class="blip" style="animation-delay:${delay}s"><title>${d.contributionCount} on ${d.date}</title></circle>`;
+    })
+    .join("");
+  const rings = [0.33, 0.66, 1].map((f) => `<circle cx="${cx}" cy="${cy}" r="${(R * f).toFixed(1)}" fill="none" stroke="${BORDER}"/>`).join("");
+  const ticks = Array.from({ length: 12 }, (_, k) => {
+    const a = (k / 12) * 2 * Math.PI - Math.PI / 2;
+    return `<line x1="${(cx + Math.cos(a) * (R - 6)).toFixed(1)}" y1="${(cy + Math.sin(a) * (R - 6)).toFixed(1)}" x2="${(cx + Math.cos(a) * R).toFixed(1)}" y2="${(cy + Math.sin(a) * R).toFixed(1)}" stroke="${DIM}"/>`;
+  }).join("");
+  const wedge = `<path d="M${cx} ${cy} L${(cx - Math.sin(Math.PI / 5) * R).toFixed(1)} ${(cy - Math.cos(Math.PI / 5) * R).toFixed(1)} A${R} ${R} 0 0 1 ${cx} ${cy - R} Z" fill="url(#sw)"/>`;
+
+  // oscilloscope: last 90 days
+  const last = days.slice(-90);
+  const ox = 360, oy = 70, ow = 600, oh = 150;
+  const lmax = Math.max(1, ...last.map((d) => d.contributionCount));
+  const pts = last.map((d, i) => [ox + (i / (last.length - 1)) * ow, oy + oh - 10 - (d.contributionCount / lmax) * (oh - 30)]);
+  const path = pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ");
+  const area = path + ` L${ox + ow} ${oy + oh} L${ox} ${oy + oh} Z`;
+  const grid = Array.from({ length: 7 }, (_, k) => `<line x1="${ox + (k * ow) / 6}" y1="${oy}" x2="${ox + (k * ow) / 6}" y2="${oy + oh}" stroke="#2b323c"/>`).join("") +
+    Array.from({ length: 4 }, (_, k) => `<line x1="${ox}" y1="${oy + (k * oh) / 3}" x2="${ox + ow}" y2="${oy + (k * oh) / 3}" stroke="#2b323c"/>`).join("");
+
+  // stats
+  const active = days.filter((d) => d.contributionCount > 0).length;
+  let streak = 0, best = 0;
+  for (const d of days) { streak = d.contributionCount > 0 ? streak + 1 : 0; best = Math.max(best, streak); }
+  const peak = days.reduce((a, d) => (d.contributionCount > a.contributionCount ? d : a), days[0]);
+  const stat = (x, label, val, col) => `<text x="${x}" y="268" class="s">${label}</text><text x="${x}" y="288" class="v" fill="${col}">${val}</text>`;
+  const pathLen = 1000;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H + 10}" viewBox="0 0 ${W} ${H + 10}">
+<defs>
+  <radialGradient id="rg" cx="${cx}" cy="${cy}" r="${R}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a78bfa" stop-opacity=".12"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset="1" stop-color="#22d3ee" stop-opacity=".45"/></linearGradient>
+  <linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a78bfa" stop-opacity=".35"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="ln" x1="0" x2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset=".5" stop-color="#f472b6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  <filter id="gl" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="oc"><rect x="${ox}" y="${oy}" width="${ow}" height="${oh}"/></clipPath>
+</defs>
+<style>
+  text { font-family: ${FONT}; }
+  .h { font-size: 15px; font-weight: 700; letter-spacing: 3px; }
+  .s { font-size: 12px; fill: ${DIM}; letter-spacing: 1px; }
+  .v { font-size: 16px; font-weight: 700; }
+  .rot { transform-origin: ${cx}px ${cy}px; animation: spin ${SWEEP}s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .blip { opacity: .25; animation: ping ${SWEEP}s linear infinite; }
+  @keyframes ping { 0% { opacity: 1; r: 5; } 8% { opacity: .9; r: 3.2; } 60% { opacity: .3; } 100% { opacity: .25; } }
+  .trace { stroke-dasharray: ${pathLen}; stroke-dashoffset: ${pathLen}; animation: draw 3.5s ease-out forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .fill { opacity: 0; animation: fi 1.5s ease-in 2.5s forwards; } @keyframes fi { to { opacity: 1; } }
+  .scan { animation: sc 5s linear infinite; } @keyframes sc { from { transform: translateX(0); } to { transform: translateX(${ow}px); } }
+  .led { animation: blink 1.4s steps(1) infinite; } @keyframes blink { 50% { opacity: .2; } }
+</style>
+<rect x=".5" y=".5" width="${W - 1}" height="${H + 9}" rx="12" fill="${BG}" stroke="${BORDER}"/>
+<g stroke="#a78bfa" stroke-width="2" fill="none"><path d="M10 26 V10 H26"/><path d="M${W - 26} ${H} H${W - 10} V${H - 16}"/></g>
+
+<circle cx="${cx}" cy="${cy}" r="${R}" fill="url(#rg)"/>${rings}${ticks}
+<line x1="${cx - R}" y1="${cy}" x2="${cx + R}" y2="${cy}" stroke="${BORDER}"/><line x1="${cx}" y1="${cy - R}" x2="${cx}" y2="${cy + R}" stroke="${BORDER}"/>
+<g class="rot">${wedge}<line x1="${cx}" y1="${cy}" x2="${cx}" y2="${cy - R}" stroke="#22d3ee" stroke-width="1.5"/></g>
+${blips}
+<circle cx="${cx}" cy="${cy}" r="3" fill="#22d3ee"/>
+
+<circle cx="${ox + 6}" cy="38" r="4" fill="#4ade80" class="led"/>
+<text x="${ox + 18}" y="43" class="h" fill="#a78bfa">SIGNAL MONITOR</text>
+<text x="${ox + ow}" y="43" class="s" text-anchor="end">// last 90 days · ${total} events / year</text>
+${grid}
+<g clip-path="url(#oc)">
+  <path d="${area}" fill="url(#ar)" class="fill"/>
+  <path d="${path}" pathLength="1000" fill="none" stroke="url(#ln)" stroke-width="2" class="trace" filter="url(#gl)"/>
+  <rect class="scan" x="${ox - 2}" y="${oy}" width="2" height="${oh}" fill="#22d3ee" opacity=".5"/>
+</g>
+<rect x="${ox}" y="${oy}" width="${ow}" height="${oh}" fill="none" stroke="${BORDER}"/>
+
+${stat(ox, "UPLINK", total, "#a78bfa")}${stat(ox + 150, "ACTIVE DAYS", active, "#22d3ee")}${stat(ox + 300, "BEST STREAK", best + "d", "#f472b6")}${stat(ox + 450, "PEAK", peak.contributionCount + " · " + peak.date.slice(5), "#fef08a")}
+</svg>`;
+}
+
 async function fetchData(login, token) {
   const query = `query($login:String!){ user(login:$login){
     contributionsCollection { totalCommitContributions restrictedContributionsCount totalPullRequestContributions totalIssueContributions contributionCalendar { totalContributions weeks { contributionDays { date contributionCount contributionLevel weekday } } } }
@@ -202,5 +295,6 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   writeFileSync("dist/stats.svg", renderStats(stats));
   writeFileSync("dist/langs.svg", renderLangs(langs));
   writeFileSync("dist/graph.svg", renderCalendar(weeks, stats.total));
+  writeFileSync("dist/pulse.svg", renderPulse(weeks, stats.total));
   console.log("ok", stats, langs.slice(0, 8).map((l) => l.name));
 }
