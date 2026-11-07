@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="310" viewBox="0 0 1000 310">
+<defs>
+  <radialGradient id="rg" cx="170" cy="150" r="115" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a78bfa" stop-opacity=".12"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset="1" stop-color="#22d3ee" stop-opacity=".45"/></linearGradient>
+  <linearGradient id="ar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a78bfa" stop-opacity=".35"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></linearGradient>
+  <linearGradient id="ln" x1="0" x2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset=".5" stop-color="#f472b6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+  <filter id="gl" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="oc"><rect x="360" y="70" width="600" height="150"/></clipPath>
+</defs>
+<style>
+  text { font-family: 'Cascadia Code','JetBrains Mono','Fira Code',Consolas,'DejaVu Sans Mono',monospace; }
+  .h { font-size: 15px; font-weight: 700; letter-spacing: 3px; }
+  .s { font-size: 12px; fill: #6e7681; letter-spacing: 1px; }
+  .v { font-size: 16px; font-weight: 700; }
+  .rot { transform-origin: 170px 150px; animation: spin 6s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .blip { opacity: .25; animation: ping 6s linear infinite; }
+  @keyframes ping { 0% { opacity: 1; r: 5; } 8% { opacity: .9; r: 3.2; } 60% { opacity: .3; } 100% { opacity: .25; } }
+  .trace { stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: draw 3.5s ease-out forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .fill { opacity: 0; animation: fi 1.5s ease-in 2.5s forwards; } @keyframes fi { to { opacity: 1; } }
+  .scan { animation: sc 5s linear infinite; } @keyframes sc { from { transform: translateX(0); } to { transform: translateX(600px); } }
+  .led { animation: blink 1.4s steps(1) infinite; } @keyframes blink { 50% { opacity: .2; } }
+</style>
+<rect x=".5" y=".5" width="999" height="309" rx="12" fill="#1b2129" stroke="#353d48"/>
+<g stroke="#a78bfa" stroke-width="2" fill="none"><path d="M10 26 V10 H26"/><path d="M974 300 H990 V284"/></g>
+
+<circle cx="170" cy="150" r="115" fill="url(#rg)"/><circle cx="170" cy="150" r="38.0" fill="none" stroke="#353d48"/><circle cx="170" cy="150" r="75.9" fill="none" stroke="#353d48"/><circle cx="170" cy="150" r="115.0" fill="none" stroke="#353d48"/><line x1="170.0" y1="41.0" x2="170.0" y2="35.0" stroke="#6e7681"/><line x1="224.5" y1="55.6" x2="227.5" y2="50.4" stroke="#6e7681"/><line x1="264.4" y1="95.5" x2="269.6" y2="92.5" stroke="#6e7681"/><line x1="279.0" y1="150.0" x2="285.0" y2="150.0" stroke="#6e7681"/><line x1="264.4" y1="204.5" x2="269.6" y2="207.5" stroke="#6e7681"/><line x1="224.5" y1="244.4" x2="227.5" y2="249.6" stroke="#6e7681"/><line x1="170.0" y1="259.0" x2="170.0" y2="265.0" stroke="#6e7681"/><line x1="115.5" y1="244.4" x2="112.5" y2="249.6" stroke="#6e7681"/><line x1="75.6" y1="204.5" x2="70.4" y2="207.5" stroke="#6e7681"/><line x1="61.0" y1="150.0" x2="55.0" y2="150.0" stroke="#6e7681"/><line x1="75.6" y1="95.5" x2="70.4" y2="92.5" stroke="#6e7681"/><line x1="115.5" y1="55.6" x2="112.5" y2="50.4" stroke="#6e7681"/>
+<line x1="55" y1="150" x2="285" y2="150" stroke="#353d48"/><line x1="170" y1="35" x2="170" y2="265" stroke="#353d48"/>
+<g class="rot"><path d="M170 150 L102.4 57.0 A115 115 0 0 1 170 35 Z" fill="url(#sw)"/><line x1="170" y1="150" x2="170" y2="35" stroke="#22d3ee" stroke-width="1.5"/></g>
+<circle cx="219.1" cy="131.0" r="3.2" fill="#a78bfa" class="blip" style="animation-delay:1.15s"><title>8 on 2026-01-12</title></circle><circle cx="225.2" cy="129.8" r="3.2" fill="#22d3ee" class="blip" style="animation-delay:1.16s"><title>10 on 2026-01-13</title></circle><circle cx="188.1" cy="186.0" r="3.2" fill="#a78bfa" class="blip" style="animation-delay:2.56s"><title>4 on 2026-04-09</title></circle><circle cx="183.5" cy="178.0" r="3.2" fill="#a78bfa" class="blip" style="animation-delay:2.57s"><title>1 on 2026-04-10</title></circle><circle cx="159.3" cy="45.5" r="3.2" fill="#fef08a" class="blip" style="animation-delay:5.90s"><title>25 on 2026-11-02</title></circle><circle cx="162.4" cy="60.7" r="3.2" fill="#fef08a" class="blip" style="animation-delay:5.92s"><title>20 on 2026-11-03</title></circle><circle cx="164.4" cy="66.8" r="3.2" fill="#fef08a" class="blip" style="animation-delay:5.94s"><title>18 on 2026-11-04</title></circle><circle cx="166.2" cy="75.9" r="3.2" fill="#22d3ee" class="blip" style="animation-delay:5.95s"><title>15 on 2026-11-05</title></circle><circle cx="168.6" cy="109.7" r="3.2" fill="#a78bfa" class="blip" style="animation-delay:5.97s"><title>4 on 2026-11-06</title></circle>
+<circle cx="170" cy="150" r="3" fill="#22d3ee"/>
+
+<circle cx="366" cy="38" r="4" fill="#4ade80" class="led"/>
+<text x="378" y="43" class="h" fill="#a78bfa">SIGNAL MONITOR</text>
+<text x="960" y="43" class="s" text-anchor="end">// last 90 days · 105 events / year</text>
+<line x1="360" y1="70" x2="360" y2="220" stroke="#2b323c"/><line x1="460" y1="70" x2="460" y2="220" stroke="#2b323c"/><line x1="560" y1="70" x2="560" y2="220" stroke="#2b323c"/><line x1="660" y1="70" x2="660" y2="220" stroke="#2b323c"/><line x1="760" y1="70" x2="760" y2="220" stroke="#2b323c"/><line x1="860" y1="70" x2="860" y2="220" stroke="#2b323c"/><line x1="960" y1="70" x2="960" y2="220" stroke="#2b323c"/><line x1="360" y1="70" x2="960" y2="70" stroke="#2b323c"/><line x1="360" y1="120" x2="960" y2="120" stroke="#2b323c"/><line x1="360" y1="170" x2="960" y2="170" stroke="#2b323c"/><line x1="360" y1="220" x2="960" y2="220" stroke="#2b323c"/>
+<g clip-path="url(#oc)">
+  <path d="M360.0 210.0 L366.7 210.0 L373.5 210.0 L380.2 210.0 L387.0 210.0 L393.7 210.0 L400.4 210.0 L407.2 210.0 L413.9 210.0 L420.7 210.0 L427.4 210.0 L434.2 210.0 L440.9 210.0 L447.6 210.0 L454.4 210.0 L461.1 210.0 L467.9 210.0 L474.6 210.0 L481.3 210.0 L488.1 210.0 L494.8 210.0 L501.6 210.0 L508.3 210.0 L515.1 210.0 L521.8 210.0 L528.5 210.0 L535.3 210.0 L542.0 210.0 L548.8 210.0 L555.5 210.0 L562.2 210.0 L569.0 210.0 L575.7 210.0 L582.5 210.0 L589.2 210.0 L596.0 210.0 L602.7 210.0 L609.4 210.0 L616.2 210.0 L622.9 210.0 L629.7 210.0 L636.4 210.0 L643.1 210.0 L649.9 210.0 L656.6 210.0 L663.4 210.0 L670.1 210.0 L676.9 210.0 L683.6 210.0 L690.3 210.0 L697.1 210.0 L703.8 210.0 L710.6 210.0 L717.3 210.0 L724.0 210.0 L730.8 210.0 L737.5 210.0 L744.3 210.0 L751.0 210.0 L757.8 210.0 L764.5 210.0 L771.2 210.0 L778.0 210.0 L784.7 210.0 L791.5 210.0 L798.2 210.0 L804.9 210.0 L811.7 210.0 L818.4 210.0 L825.2 210.0 L831.9 210.0 L838.7 210.0 L845.4 210.0 L852.1 210.0 L858.9 210.0 L865.6 210.0 L872.4 210.0 L879.1 210.0 L885.8 210.0 L892.6 210.0 L899.3 210.0 L906.1 210.0 L912.8 210.0 L919.6 210.0 L926.3 90.0 L933.0 114.0 L939.8 123.6 L946.5 138.0 L953.3 190.8 L960.0 210.0 L960 220 L360 220 Z" fill="url(#ar)" class="fill"/>
+  <path d="M360.0 210.0 L366.7 210.0 L373.5 210.0 L380.2 210.0 L387.0 210.0 L393.7 210.0 L400.4 210.0 L407.2 210.0 L413.9 210.0 L420.7 210.0 L427.4 210.0 L434.2 210.0 L440.9 210.0 L447.6 210.0 L454.4 210.0 L461.1 210.0 L467.9 210.0 L474.6 210.0 L481.3 210.0 L488.1 210.0 L494.8 210.0 L501.6 210.0 L508.3 210.0 L515.1 210.0 L521.8 210.0 L528.5 210.0 L535.3 210.0 L542.0 210.0 L548.8 210.0 L555.5 210.0 L562.2 210.0 L569.0 210.0 L575.7 210.0 L582.5 210.0 L589.2 210.0 L596.0 210.0 L602.7 210.0 L609.4 210.0 L616.2 210.0 L622.9 210.0 L629.7 210.0 L636.4 210.0 L643.1 210.0 L649.9 210.0 L656.6 210.0 L663.4 210.0 L670.1 210.0 L676.9 210.0 L683.6 210.0 L690.3 210.0 L697.1 210.0 L703.8 210.0 L710.6 210.0 L717.3 210.0 L724.0 210.0 L730.8 210.0 L737.5 210.0 L744.3 210.0 L751.0 210.0 L757.8 210.0 L764.5 210.0 L771.2 210.0 L778.0 210.0 L784.7 210.0 L791.5 210.0 L798.2 210.0 L804.9 210.0 L811.7 210.0 L818.4 210.0 L825.2 210.0 L831.9 210.0 L838.7 210.0 L845.4 210.0 L852.1 210.0 L858.9 210.0 L865.6 210.0 L872.4 210.0 L879.1 210.0 L885.8 210.0 L892.6 210.0 L899.3 210.0 L906.1 210.0 L912.8 210.0 L919.6 210.0 L926.3 90.0 L933.0 114.0 L939.8 123.6 L946.5 138.0 L953.3 190.8 L960.0 210.0" pathLength="1000" fill="none" stroke="url(#ln)" stroke-width="2" class="trace" filter="url(#gl)"/>
+  <rect class="scan" x="358" y="70" width="2" height="150" fill="#22d3ee" opacity=".5"/>
+</g>
+<rect x="360" y="70" width="600" height="150" fill="none" stroke="#353d48"/>
+
+<text x="360" y="268" class="s">UPLINK</text><text x="360" y="288" class="v" fill="#a78bfa">105</text><text x="510" y="268" class="s">ACTIVE DAYS</text><text x="510" y="288" class="v" fill="#22d3ee">9</text><text x="660" y="268" class="s">BEST STREAK</text><text x="660" y="288" class="v" fill="#f472b6">5d</text><text x="810" y="268" class="s">PEAK</text><text x="810" y="288" class="v" fill="#fef08a">25 · 11-02</text>
+</svg>
