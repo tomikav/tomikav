@@ -18,26 +18,22 @@
 <h2 align="center">⛧ sys.identity ⛧</h2>
 
 <p align="center">
-  <img src="./assets/whoami_1.svg" width="100%" alt="whoami" />
+  <img src="./assets/whoami-v2.svg" width="100%" alt="whoami" />
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Windows_11-0a0a0f?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMTEuNHYxMS40SDB6TTEyLjYgMEgyNHYxMS40SDEyLjZ6TTAgMTIuNmgxMS40VjI0SDB6TTEyLjYgMTIuNkgyNFYyNEgxMi42eiIvPjwvc3ZnPg%3D%3D" />
   <img src="https://img.shields.io/badge/Garuda_Linux-0a0a0f?style=for-the-badge&logo=garudalinux&logoColor=a78bfa" />
-  <img src="https://img.shields.io/badge/Cybersecurity_Seedbed-0a0a0f?style=for-the-badge&logo=hackthebox&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Cybersecurity-0a0a0f?style=for-the-badge&logo=hackthebox&logoColor=a78bfa" />
+  <img src="https://img.shields.io/badge/Side_Projects-0a0a0f?style=for-the-badge&logo=github&logoColor=a78bfa" />
 </p>
 
 <img src="./assets/divider.svg" width="100%" />
 
 <h2 align="center">🕷 active directives</h2>
 
-<p align="left">
-
-- **Vamp Layout:** Modern architectural layout engine focused on high-performance modular UI components and layout rendering.
-- **EMG Bio-Sensor:** Conceptual surface electromyography wearable bracelet for motor rehabilitation and gesture recognition.
-- **Source 2 Modding & CV:** Asset extraction via **Source2Viewer**, 3D character pipeline in **Blender**, and hand/facial gesture computer vision tracking R&D in **Python**.
-- **Cybersecurity Research:** Applied vulnerability assessment and threat analysis methodologies within academic seedbed workflows.
-
+<p align="center">
+  <img src="./assets/directives.svg" width="100%" alt="active directives" />
 </p>
 
 <img src="./assets/divider.svg" width="100%" />
