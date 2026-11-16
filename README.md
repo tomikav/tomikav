@@ -3,6 +3,14 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/tomikav"><img src="https://img.shields.io/badge/Gothic-a78bfa?style=for-the-badge&labelColor=a78bfa" alt="Gothic" /></a>
+  <a href="https://github.com/tomikav/tomikav/blob/main/themes/frost.md"><img src="https://img.shields.io/badge/Frost-0d1117?style=for-the-badge" alt="Frost" /></a>
+  <a href="https://github.com/tomikav/tomikav/blob/main/themes/crimson.md"><img src="https://img.shields.io/badge/Crimson-0d1117?style=for-the-badge" alt="Crimson" /></a>
+  <a href="https://github.com/tomikav/tomikav/blob/main/themes/toxic.md"><img src="https://img.shields.io/badge/Toxic-0d1117?style=for-the-badge" alt="Toxic" /></a>
+  <a href="https://github.com/tomikav/tomikav/blob/main/themes/sakura.md"><img src="https://img.shields.io/badge/Sakura-0d1117?style=for-the-badge" alt="Sakura" /></a>
+</p>
+
+<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=%3E+web+apps+%C2%B7+terminal+tooling+%C2%B7+game+mods;%3E+angular+%C2%B7+go+%C2%B7+java+%C2%B7+typescript;%3E+windows+11+%E2%87%84+garuda+linux" alt="typing" />
 </p>
 

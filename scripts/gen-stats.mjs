@@ -243,6 +243,37 @@ ${stat(ox, "UPLINK", total, "#a78bfa")}${stat(ox + 150, "ACTIVE DAYS", active, "
 </svg>`;
 }
 
+// ── theme variants ─────────────────────────────────────────────
+const THEMES = {
+  frost:   { h: 205, k: 0.22, s: 0.85, l: 1.00 },
+  crimson: { h: 352, k: 0.18, s: 1.05, l: 0.98 },
+  toxic:   { h: 135, k: 0.25, s: 1.00, l: 1.00 },
+  sakura:  { h: 330, k: 0.30, s: 0.80, l: 1.04 },
+};
+function hls2rgb(h, l, s) {
+  if (s === 0) return [l, l, l];
+  const q = l < 0.5 ? l * (1 + s) : l + s - l * s, p = 2 * l - q;
+  const f = (t) => { t = (t + 1) % 1; return t < 1/6 ? p + (q - p) * 6 * t : t < 1/2 ? q : t < 2/3 ? p + (q - p) * (2/3 - t) * 6 : p; };
+  return [f(h + 1/3), f(h), f(h - 1/3)];
+}
+function convHex(hex, t) {
+  const r = parseInt(hex.slice(0, 2), 16) / 255, g = parseInt(hex.slice(2, 4), 16) / 255, b = parseInt(hex.slice(4, 6), 16) / 255;
+  const mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2;
+  let h = 0, s = 0;
+  if (mx !== mn) {
+    const d = mx - mn; s = l > 0.5 ? d / (2 - mx - mn) : d / (mx + mn);
+    h = mx === r ? ((g - b) / d + (g < b ? 6 : 0)) : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; h /= 6;
+  }
+  if (s < 0.04 && (l < 0.08 || l > 0.92)) return hex;
+  const dd = ((h * 360 - 265 + 180) % 360 + 360) % 360 - 180;
+  const nh = (((t.h + dd * t.k) % 360) + 360) % 360 / 360;
+  const [R, G, B] = hls2rgb(nh, Math.min(1, l * t.l), Math.min(1, s * t.s));
+  return [R, G, B].map((v) => Math.round(v * 255).toString(16).padStart(2, "0")).join("");
+}
+export function themify(svg, t, keep = new Set()) {
+  return svg.replace(/#([0-9a-fA-F]{6})\b/g, (m, hx) => (keep.has(hx.toLowerCase()) ? m : "#" + convHex(hx.toLowerCase(), t)));
+}
+
 async function fetchData(login, token) {
   const query = `query($login:String!){ user(login:$login){
     contributionsCollection { totalCommitContributions restrictedContributionsCount totalPullRequestContributions totalIssueContributions contributionCalendar { totalContributions weeks { contributionDays { date contributionCount contributionLevel weekday } } } }
@@ -296,5 +327,10 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   writeFileSync("dist/langs.svg", renderLangs(langs));
   writeFileSync("dist/graph.svg", renderCalendar(weeks, stats.total));
   writeFileSync("dist/pulse.svg", renderPulse(weeks, stats.total));
+  const langKeep = new Set(langs.map((l) => (l.color || "").replace("#", "").toLowerCase()).filter(Boolean));
+  const base = { stats: renderStats(stats), langs: renderLangs(langs), graph: renderCalendar(weeks, stats.total), pulse: renderPulse(weeks, stats.total) };
+  for (const [name, t] of Object.entries(THEMES)) {
+    for (const [k, svg] of Object.entries(base)) writeFileSync(`dist/${k}-${name}.svg`, themify(svg, t, k === "langs" ? langKeep : new Set()));
+  }
   console.log("ok", stats, langs.slice(0, 8).map((l) => l.name));
 }
