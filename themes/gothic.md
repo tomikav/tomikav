@@ -4,11 +4,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/tomikav/tomikav/issues/new?title=%E2%A4%A8%20shuffle&body=Press%20%E2%80%9CCreate%E2%80%9D%20and%20the%20profile%20will%20switch%20to%20a%20random%20theme%20in%20a%20few%20seconds."><img src="./assets/shuffle.svg" width="56" alt="shuffle theme" title="shuffle theme" /></a>
-  <br/><sub>shuffle theme</sub>
-</p>
-
-<p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=%3E+web+apps+%C2%B7+terminal+tooling+%C2%B7+game+mods;%3E+angular+%C2%B7+go+%C2%B7+java+%C2%B7+typescript;%3E+windows+11+%E2%87%84+garuda+linux" alt="typing" />
 </p>
 

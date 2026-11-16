@@ -1,20 +1,19 @@
-name: shuffle theme
+name: rotate theme
 
 on:
-  issues:
-    types: [opened]
+  schedule:
+    - cron: "23 */6 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
-  issues: write
 
 concurrency:
-  group: shuffle-theme
+  group: rotate-theme
   cancel-in-progress: false
 
 jobs:
-  shuffle:
-    if: contains(github.event.issue.title, 'shuffle')
+  rotate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -38,19 +37,3 @@ jobs:
           git add README.md
           git commit -m "theme: ${{ steps.pick.outputs.next }}"
           git push
-
-      - name: reply and close
-        uses: actions/github-script@v7
-        env:
-          NEXT: ${{ steps.pick.outputs.next }}
-        with:
-          script: |
-            const t = process.env.NEXT;
-            await github.rest.issues.createComment({
-              ...context.repo, issue_number: context.issue.number,
-              body: `⤨ Theme switched to **${t}**. Head back to the profile: https://github.com/${context.repo.owner}`
-            });
-            await github.rest.issues.update({
-              ...context.repo, issue_number: context.issue.number,
-              state: 'closed', state_reason: 'completed'
-            });
