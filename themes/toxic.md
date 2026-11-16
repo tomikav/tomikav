@@ -3,11 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/tomikav"><img src="https://img.shields.io/badge/Gothic-0d1117?style=for-the-badge" alt="Gothic" /></a>
-  <a href="https://github.com/tomikav/tomikav/blob/main/themes/frost.md"><img src="https://img.shields.io/badge/Frost-0d1117?style=for-the-badge" alt="Frost" /></a>
-  <a href="https://github.com/tomikav/tomikav/blob/main/themes/crimson.md"><img src="https://img.shields.io/badge/Crimson-0d1117?style=for-the-badge" alt="Crimson" /></a>
-  <a href="https://github.com/tomikav/tomikav/blob/main/themes/toxic.md"><img src="https://img.shields.io/badge/Toxic-8bfaa2?style=for-the-badge&labelColor=8bfaa2" alt="Toxic" /></a>
-  <a href="https://github.com/tomikav/tomikav/blob/main/themes/sakura.md"><img src="https://img.shields.io/badge/Sakura-0d1117?style=for-the-badge" alt="Sakura" /></a>
+  <a href="https://github.com/tomikav/tomikav/blob/main/themes/frost.md"><img src="../assets/toxic/shuffle.svg" width="56" alt="shuffle theme" title="shuffle theme" /></a>
 </p>
 
 <p align="center">
