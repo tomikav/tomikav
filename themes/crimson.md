@@ -1,9 +1,11 @@
+<!-- theme:crimson -->
 <p align="center">
-  <img src="../assets/crimson/header.svg" width="100%" alt="TOMIKA" />
+  <img src="./assets/crimson/header.svg" width="100%" alt="TOMIKA" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/tomikav"><img src="../assets/crimson/shuffle.svg" width="56" alt="shuffle theme" title="shuffle theme" /></a>
+  <a href="https://github.com/tomikav/tomikav/issues/new?title=%E2%A4%A8%20shuffle&body=Press%20%E2%80%9CCreate%E2%80%9D%20and%20the%20profile%20will%20switch%20to%20a%20random%20theme%20in%20a%20few%20seconds."><img src="./assets/crimson/shuffle.svg" width="56" alt="shuffle theme" title="shuffle theme" /></a>
+  <br/><sub>shuffle theme</sub>
 </p>
 
 <p align="center">
@@ -17,12 +19,12 @@
   <img src="https://komarev.com/ghpvc/?username=tomikav&style=for-the-badge&color=fa526b&labelColor=0f0a0b&label=VISITORS" />
 </p>
 
-<img src="../assets/crimson/divider.svg" width="100%" />
+<img src="./assets/crimson/divider.svg" width="100%" />
 
 <h2 align="center">⛧ sys.identity ⛧</h2>
 
 <p align="center">
-  <img src="../assets/crimson/whoami.svg" width="100%" alt="whoami" />
+  <img src="./assets/crimson/whoami.svg" width="100%" alt="whoami" />
 </p>
 
 <p align="center">
@@ -32,23 +34,23 @@
   <img src="https://img.shields.io/badge/Side_Projects-0f0a0b?style=for-the-badge&logo=github&logoColor=fd8195" />
 </p>
 
-<img src="../assets/crimson/divider.svg" width="100%" />
+<img src="./assets/crimson/divider.svg" width="100%" />
 
 <h2 align="center">🕷 active directives</h2>
 
 <p align="center">
-  <img src="../assets/crimson/directives.svg" width="100%" alt="active directives" />
+  <img src="./assets/crimson/directives.svg" width="100%" alt="active directives" />
 </p>
 
-<img src="../assets/crimson/divider.svg" width="100%" />
+<img src="./assets/crimson/divider.svg" width="100%" />
 
 <h2 align="center">arsenal</h2>
 
 <p align="center">
-  <img src="../assets/crimson/arsenal.svg" width="100%" alt="arsenal" />
+  <img src="./assets/crimson/arsenal.svg" width="100%" alt="arsenal" />
 </p>
 
-<img src="../assets/crimson/divider.svg" width="100%" />
+<img src="./assets/crimson/divider.svg" width="100%" />
 
 <h2 align="center">☾ live metrics</h2>
 
@@ -75,15 +77,15 @@
 </details>
 </div>
 
-<img src="../assets/crimson/divider.svg" width="100%" />
+<img src="./assets/crimson/divider.svg" width="100%" />
 
 <h2 align="center">⛓ machines</h2>
 
 <p align="center">
-  <img src="../assets/crimson/machines.svg" width="100%" alt="machines" />
+  <img src="./assets/crimson/machines.svg" width="100%" alt="machines" />
 </p>
 
-<img src="../assets/crimson/divider.svg" width="100%" />
+<img src="./assets/crimson/divider.svg" width="100%" />
 
 <h2 align="center">♱ audio</h2>
 
@@ -100,5 +102,5 @@
 </p>
 
 <p align="center">
-  <img src="../assets/crimson/footer.svg" width="100%" />
+  <img src="./assets/crimson/footer.svg" width="100%" />
 </p>

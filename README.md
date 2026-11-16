@@ -1,9 +1,11 @@
+<!-- theme:gothic -->
 <p align="center">
   <img src="./assets/header-v6.svg" width="100%" alt="TOMIKA" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/tomikav/tomikav/blob/main/themes/toxic.md"><img src="./assets/shuffle.svg" width="56" alt="shuffle theme" title="shuffle theme" /></a>
+  <a href="https://github.com/tomikav/tomikav/issues/new?title=%E2%A4%A8%20shuffle&body=Press%20%E2%80%9CCreate%E2%80%9D%20and%20the%20profile%20will%20switch%20to%20a%20random%20theme%20in%20a%20few%20seconds."><img src="./assets/shuffle.svg" width="56" alt="shuffle theme" title="shuffle theme" /></a>
+  <br/><sub>shuffle theme</sub>
 </p>
 
 <p align="center">
